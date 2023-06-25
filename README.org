@@ -1,2 +1,2 @@
-#+#+title: magento2-cli.el - Magento 2 command-line interface
+#+title: magento2-cli.el - Magento 2 command-line interface
 #+language: en
