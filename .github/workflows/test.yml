@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    paths-ignore:
+    - '**/*.md'
+    - 'etc/*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    strategy:
+      matrix:
+        emacs_version:
+          - "27.2"
+          - "28.1"
+          - "28.2"
+          - "release-snapshot"
+          - "snapshot"
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+    - uses: purcell/setup-emacs@master
+      with:
+        version: ${{ matrix.emacs_version }}
+    - name: Run tests
+      run: make test
