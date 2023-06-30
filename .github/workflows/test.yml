@@ -16,5 +16,8 @@ jobs:
     steps:
     - name: Checkout repo
       uses: actions/checkout@v3
+    - uses: purcell/setup-emacs@master
+      with:
+        version: ${{ matrix.emacs_version }}
     - name: Run tests
       run: make test
