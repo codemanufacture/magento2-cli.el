@@ -24,5 +24,11 @@ jobs:
     - uses: purcell/setup-emacs@master
       with:
         version: ${{ matrix.emacs_version }}
+    - uses: leotaku/elisp-check@master
+      with:
+        check: melpa
+        file: "magento2-cli.el"
+        ignore_warnings: false
+        warnings_as_errors: false
     - name: Run tests
       run: make test
