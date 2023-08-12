@@ -1,2 +1,13 @@
 #+title: magento2-cli.el - Magento 2 command-line interface
 #+language: en
+#+OPTIONS: d:nil
+
+#+html: <a href="https://www.gnu.org/software/emacs/"><img src="https://img.shields.io/badge/Emacs-29.1-blue.svg" alt="Emacs 29.1"/></a>
+
+** Overview
+
+This package provides an interface for Magento 2 / Adobe commerce command-line tool.
+
+** Copyright
+
+~magento2-cli.el~ is licensed under [[https://www.gnu.org/licenses/quick-guide-gplv3.html][GNU General Public License Version 3]] (GPLv3).
